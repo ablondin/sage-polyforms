@@ -19,27 +19,27 @@ class SageTest(TestCommand):
             sys.exit(1)
 
 setup(
-    name = "sage_sample",
+    name = "polyforms",
     version = readfile("VERSION"), # the VERSION file is shared with the documentation
-    description='An example of a basic sage package',
+    description='A package for playing with polyforms',
     long_description = readfile("README.rst"), # get the long description from the README
-    url='https://github.com/sagemath/sage_sample',
-    author='Matthias Koeppe, Sébastien Labbé, Viviane Pons, Nicolas M. Thiéry, ... with inspiration from many',
-    author_email='viviane.pons@lri.fr', # choose a main contact email
+    url='https://github.com/ablondin/sage-polyforms',
+    author='Alexandre Blondin Massé',
+    author_email='alexandre.blondin.masse@gmail.com', # choose a main contact email
     license='GPLv2+', # This should be consistent with the LICENCE file
     classifiers=[
       # How mature is this project? Common values are
       #   3 - Alpha
       #   4 - Beta
       #   5 - Production/Stable
-      'Development Status :: 4 - Beta',
+      'Development Status :: 3 - Alpha',
       'Intended Audience :: Science/Research',
-      'Topic :: Software Development :: Build Tools',
-      'Topic :: Scientific/Engineering :: Mathematics',
+      'Topic :: Combinatorics :: Polyforms',
+      'Topic :: Computer Science :: Mathematics',
       'License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)',
       'Programming Language :: Python :: 2.7',
     ], # classifiers list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
-    keywords = "SageMath packaging",
-    packages = ['sage_sample'],
+    keywords = "Polyform, polyomino, polycube, polyhex, polyiamond",
+    packages = ['polyforms'],
     cmdclass = {'test': SageTest} # adding a special setup command for tests
 )
